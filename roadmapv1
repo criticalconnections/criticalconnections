@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Roadmap</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 48rem;
+            margin: 0 auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .subtitle {
+            color: #4b5563;
+        }
+
+        .timeline {
+            color: #2563eb;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .roadmap-item {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 12px;
+            top: 24px;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            z-index: 1;
+        }
+
+        .completed {
+            color: #22c55e;
+        }
+
+        .pending {
+            color: #3b82f6;
+        }
+
+        .card {
+            flex: 1;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            background: white;
+        }
+
+        .card-header {
+            padding: 1rem 1rem 0.5rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .card-title.completed {
+            color: #16a34a;
+        }
+
+        .card-title.pending {
+            color: #2563eb;
+        }
+
+        .time-estimate {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .card-content {
+            padding: 0.5rem 1rem 1rem 1rem;
+        }
+
+        .task-list {
+            list-style-position: inside;
+            color: #4b5563;
+        }
+
+        .task-list li {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .last .timeline-line {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Development Roadmap</h1>
+            <div class="header-content">
+                <p class="subtitle">Dental STL Platform Development Progress</p>
+                <p class="timeline">Total Timeline: 4 weeks</p>
+            </div>
+        </div>
+
+        <div class="roadmap">
+            <!-- Completed Foundation -->
+            <div class="roadmap-item">
+                <div class="timeline-line"></div>
+                <svg class="icon completed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title completed">Completed Foundation</h3>
+                        <div class="time-estimate">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Completed
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li>STL File Transfer System Implementation</li>
+                            <li>Dynamic User Portal Development</li>
+                            <li>Role-based Access Control System</li>
+                            <li>User Management Hierarchy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Integration -->
+            <div class="roadmap-item">
+                <div class="timeline-line"></div>
+                <svg class="icon pending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title pending">Payment Integration</h3>
+                        <div class="time-estimate">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            5 days
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li>Stripe API Integration (2 days)</li>
+                            <li>Secure Payment Processing (2 days)</li>
+                            <li>Transaction Management & Testing (1 day)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STL Management System -->
+            <div class="roadmap-item">
+                <div class="timeline-line"></div>
+                <svg class="icon pending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title pending">STL Management System</h3>
+                        <div class="time-estimate">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            5 days
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li>File Access Control Implementation (2 days)</li>
+                            <li>3D Preview Generation (2 days)</li>
+                            <li>Version Control System (1 day)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor Portal -->
+            <div class="roadmap-item">
+                <div class="timeline-line"></div>
+                <svg class="icon pending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title pending">Doctor Portal</h3>
+                        <div class="time-estimate">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            5 days
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li>Dashboard Interface (2 days)</li>
+                            <li>Order History & Tracking (1 day)</li>
+                            <li>STL Download Center (2 days)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lab Technician Portal -->
+            <div class="roadmap-item">
+                <div class="timeline-line"></div>
+                <svg class="icon pending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title pending">Lab Technician Portal</h3>
+                        <div class="time-estimate">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            4 days
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li>Upload Interface (2 days)</li>
+                            <li>Order Management System (1 day)</li>
+                            <li>Client Management Tools (1 day)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Enhancement -->
+            <div class="roadmap-item last">
+                <div class="timeline-line"></div>
+                <svg class="icon pending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title pending">Platform Enhancement</h3>
+                        <div class="time-estimate">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            5 days
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul class="task-list">
+                            <li>UI/UX Refinement (2 days)</li>
+                            <li>Performance Optimization (1 day)</li>
+                            <li>Testing & Production Deploy (2 days)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
